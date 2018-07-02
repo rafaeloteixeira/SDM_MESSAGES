@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.rafael.appmensagens.View.CadastrarContatoActivity">
+
+<EditText
+    android:enabled="false"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_id"
+    android:hint="Id do Contato"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_nome_completo"
+    android:hint="Nome do contato"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_apelido"
+    android:hint="Apelido do contato"
+    />
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_cadastrar_novo_contato"
+    android:onClick="cadastraNovoContato"
+    android:text="Cadastrar"
+    />
+
+</LinearLayout>

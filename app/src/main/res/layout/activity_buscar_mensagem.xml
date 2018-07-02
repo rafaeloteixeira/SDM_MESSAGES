@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:orientation="vertical"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context="com.example.rafael.appmensagens.View.BuscarMensagemActivity">
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_remetente"
+    android:inputType="number"
+    android:hint="ID do remetente"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_destinatario"
+    android:inputType="number"
+    android:hint="ID do destinatário"
+    />
+
+<EditText
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/et_ultima_mensagem"
+    android:inputType="number"
+    android:hint="ID da última mensagem"
+    />
+
+<Button
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/bt_buscar_mensagens"
+    android:text="Buscar Mensagens"
+    android:onClick="buscarMensagens"/>
+
+
+
+</LinearLayout>
