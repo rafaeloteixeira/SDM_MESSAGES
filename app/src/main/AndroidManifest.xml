@@ -23,7 +23,8 @@
         <activity android:name=".View.MostraMensagensActivity" />
         <activity android:name=".View.BuscarMensagemActivity" />
         <activity android:name=".View.CadastrarContatoActivity" />
-        <activity android:name=".View.ContatosActivity"></activity>
+        <activity android:name=".View.ContatosActivity" />
+        <activity android:name=".View.AdicionarContatoActivity"></activity>
     </application>
 
 </manifest>

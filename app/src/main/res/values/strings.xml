@@ -6,4 +6,5 @@
     <string name="apelido_do_usuario">Apelido do usuário</string>
     <string name="nome_do_usuario">Nome do usuário</string>
     <string name="problema_login">Problema ao efetuar o login</string>
+    <string name="erro_busca_contatos">Erro ao buscar os contatos</string>
 </resources>
