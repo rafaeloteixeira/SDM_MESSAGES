@@ -7,26 +7,26 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 tools:context="com.example.rafael.appmensagens.View.CadastrarContatoActivity">
 
-<EditText
-    android:enabled="false"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:id="@+id/et_id"
-    android:hint="Id do Contato"
-    />
+<!--<EditText-->
+    <!--android:enabled="false"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:id="@+id/et_id"-->
+    <!--android:hint="Id do Contato"-->
+    <!--/>-->
 
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/et_nome_completo"
-    android:hint="Nome do contato"
+    android:hint="@string/nome_do_usuario"
     />
 
 <EditText
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/et_apelido"
-    android:hint="Apelido do contato"
+    android:hint="@string/apelido_do_usuario"
     />
 
 <Button

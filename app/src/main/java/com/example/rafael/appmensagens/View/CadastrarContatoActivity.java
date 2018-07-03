@@ -1,5 +1,6 @@
 package com.example.rafael.appmensagens.View;
 
+        import android.content.Intent;
         import android.os.AsyncTask;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -8,6 +9,8 @@ package com.example.rafael.appmensagens.View;
         import android.widget.Toast;
 
         import com.example.rafael.appmensagens.Controller.MensageiroApi;
+        import com.example.rafael.appmensagens.Controller.UsuarioController;
+        import com.example.rafael.appmensagens.MainActivity;
         import com.example.rafael.appmensagens.Model.Contato;
         import com.example.rafael.appmensagens.R;
         import com.google.gson.Gson;
@@ -29,7 +32,7 @@ public class CadastrarContatoActivity extends AppCompatActivity {
 
     private static final String URL_BASE = "http://www.nobile.pro.br/sdm4/mensageiro/";
 
-    EditText idET;
+//    EditText idET;
     EditText nomeCompletoET;
     EditText apelidoET;
 
@@ -42,7 +45,7 @@ public class CadastrarContatoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastrar_contato);
 
-        idET = findViewById(R.id.et_id);
+//        idET = findViewById(R.id.et_id);
         nomeCompletoET = findViewById(R.id.et_nome_completo);
         apelidoET = findViewById(R.id.et_apelido);
 
@@ -68,8 +71,14 @@ public class CadastrarContatoActivity extends AppCompatActivity {
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
                     try {
                         Contato contatoCadastrado = gson.fromJson(response.body().string(),Contato.class);
+                        UsuarioController.getInstance().SalvarUltimoID(Integer.parseInt(contatoCadastrado.getId()),getApplicationContext());
 
-                        idET.setText(contatoCadastrado.getId());
+                        //idET.setText(contatoCadastrado.getId());
+
+                        Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
 
                     } catch (IOException e) {
                         e.printStackTrace();

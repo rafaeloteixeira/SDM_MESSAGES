@@ -27,8 +27,6 @@ public class BuscarMensagemActivity extends AppCompatActivity {
     //private Button buscarMensageBT;
 
     private static final String URL_BASE = "http://www.nobile.pro.br/sdm4/mensageiro/";
-    private static final String CORPO_MENSAGEM_JSON = "corpo";
-
     public static final String MENSAGENS_STRING_ARRAY_EXTRA  = "MENSAGENS_STRING_ARRAY_EXTRA";
 
     private Retrofit retrofit;

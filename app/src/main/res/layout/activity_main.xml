@@ -1,28 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:orientation="vertical"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-tools:context="com.example.rafael.appmensagens.MainActivity">
-
-
-
-    <Button
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bt_nova_mensagem"
-        android:text="Buscar Mensagens"
-        android:onClick="abrirBuscaMensagem"/>
+        android:orientation="vertical">
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="ID do Usuário" android:maxLines="1"
+            android:digits="0123456789."
+            android:inputType="number"
+            android:gravity="center_horizontal"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_entrar"
+            android:text="@string/entrar"
+            android:onClick="efetuarLogin"/>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/bt_cadastrar_contato"
-        android:text="Cadastrar Contato"
-        android:onClick="abrirCadastrarContato"/>
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/bt_cadastrar"
+            android:text="@string/cadastrar"
+            android:onClick="abrirCadastrarContato"/>
 
+    </LinearLayout>
 
-
-</LinearLayout>
+</RelativeLayout>

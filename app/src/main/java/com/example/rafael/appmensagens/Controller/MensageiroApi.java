@@ -27,6 +27,8 @@ public interface MensageiroApi {
     @POST("contato")
     Call<ResponseBody> postContato(@Body RequestBody novoContato);
 
+    @GET("contato/{id}")
+    Call<ResponseBody> getContatoByPathId(@Path("id") String contatoId);
 
     @GET("mensagem/{mensagemId}")
     Call<ResponseBody> getMensagemByPathId(@Path("mensagemId") String mensagemId);
@@ -39,7 +41,6 @@ public interface MensageiroApi {
 
     @GET("mensagens")
     Call<ListaMensagem> getMensagensByQuery(@Query("id") String id, @Query("origem") String origemId, @Query("destino") String destinoId);
-
 
     @GET("rawmensagens/{ultimaMensagemId}/{origemId}/{destinoId}")
     Call<List<Mensagem>> getRawMensagensByPath(@Path("ultimaMensagemId")String id, @Path("origemId") String origemId, @Path("destinoId") String destinoId);
