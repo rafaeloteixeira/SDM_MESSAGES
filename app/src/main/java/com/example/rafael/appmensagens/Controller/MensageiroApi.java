@@ -1,9 +1,12 @@
 package com.example.rafael.appmensagens.Controller;
 
 
+import com.example.rafael.appmensagens.Model.Contato;
+import com.example.rafael.appmensagens.Model.ListaContatos;
 import com.example.rafael.appmensagens.Model.ListaMensagem;
 import com.example.rafael.appmensagens.Model.Mensagem;
 
+import java.util.ArrayList;
 import java.util.List;
 
 import okhttp3.RequestBody;
@@ -27,10 +30,8 @@ public interface MensageiroApi {
     @POST("contato")
     Call<ResponseBody> postContato(@Body RequestBody novoContato);
 
-
-    @POST("mensagem")
-    Call<ResponseBody> postMensagem(@Body RequestBody novaMensagem);
-
+    @GET("rawcontatos")
+    Call<List<Contato>> getContatos();
 
     @GET("contato/{id}")
     Call<ResponseBody> getContatoByPathId(@Path("id") String contatoId);
