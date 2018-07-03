@@ -92,59 +92,6 @@ public class CadastrarContatoActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"Erro",Toast.LENGTH_LONG).show();
                 }
             });
-
-
-
-
-            /*
-            try {
-
-                RequestBody requestBody = RequestBody.create(MediaType.parse("application/json"), gson.toJson(contato));
-
-                MensageiroApi mensageiroApi = retrofit.create(MensageiroApi.class);
-
-                Call<ResponseBody> chamada = mensageiroApi.postContato(requestBody);
-
-                AsyncTask<Call<ResponseBody>,Void,Contato> executaRequisicaoAT = new AsyncTask<Call<ResponseBody>, Void, Contato>() {
-                    @Override
-                    protected Contato doInBackground(Call<ResponseBody>[] calls) {
-
-                        try {
-
-                        Call<ResponseBody> chamadaSincrona = calls[0];
-
-                        Response<ResponseBody> responseBody = chamadaSincrona.execute();
-
-
-                        Contato contatoCadastrado = gson.fromJson(responseBody.body().string(),Contato.class);
-
-                        //idET.setText(contatoCadastrado.getId());
-
-                            return contatoCadastrado;
-
-                        } catch (IOException e) {
-                            e.printStackTrace();
-                        }
-
-                        return null;
-                    }
-
-                    @Override
-                    protected void onPostExecute(Contato contatoCadastrado) {
-                        super.onPostExecute(contatoCadastrado);
-
-                        idET.setText(contatoCadastrado.getId());
-                    }
-                };
-
-                executaRequisicaoAT.execute(chamada);
-
-
-            } catch (Exception e) {
-                e.printStackTrace();
-            }
-*/
-
         }
     }
 }

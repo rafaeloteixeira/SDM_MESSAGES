@@ -27,6 +27,11 @@ public interface MensageiroApi {
     @POST("contato")
     Call<ResponseBody> postContato(@Body RequestBody novoContato);
 
+
+    @POST("mensagem")
+    Call<ResponseBody> postMensagem(@Body RequestBody novaMensagem);
+
+
     @GET("contato/{id}")
     Call<ResponseBody> getContatoByPathId(@Path("id") String contatoId);
 

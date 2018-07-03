@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Projeto_SDM.iml" filepath="$PROJECT_DIR$/Projeto_SDM.iml" />
+      <module fileurl="file://C:\SDM_MESSAGES\Projeto_SDM.iml" filepath="C:\SDM_MESSAGES\Projeto_SDM.iml" />
       <module fileurl="file://$PROJECT_DIR$/SDM_MESSAGES.iml" filepath="$PROJECT_DIR$/SDM_MESSAGES.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

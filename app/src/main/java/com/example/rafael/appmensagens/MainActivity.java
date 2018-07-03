@@ -69,12 +69,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void abrirBuscaMensagem(View view) {
-        /*if (view.getId() == R.id.bt_nova_mensagem) {
+        if (view.getId() == R.id.bt_nova_mensagem) {
             Intent intent = new Intent(getApplicationContext(), BuscarMensagemActivity.class);
             startActivity(intent);
 
             startActivity(intent);
-        }*/
+        }
     }
 
     public void efetuarLogin(View view) {
