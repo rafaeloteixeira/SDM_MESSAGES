@@ -77,6 +77,11 @@ public class ContatosActivity extends AppCompatActivity implements AdicionarCont
     @Override
     public void onItemClick(View view, int position) {
         Contato contatoSelecionado = adapter.getItem(position);
-        Toast.makeText(getApplicationContext(), contatoSelecionado.getApelido(), Toast.LENGTH_LONG).show();
+
+        Intent intent = new Intent(getApplicationContext(),MostraMensagensActivity.class);
+        intent.putExtra("contato", contatoSelecionado.getId());
+        startActivity(intent);
+
+        //Toast.makeText(getApplicationContext(), contatoSelecionado.getApelido(), Toast.LENGTH_LONG).show();
     }
 }

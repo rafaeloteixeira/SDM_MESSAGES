@@ -68,14 +68,7 @@ public class MainActivity extends AppCompatActivity {
             idUsuarioET.setText(String.valueOf(ultimoID));
     }
 
-    public void abrirBuscaMensagem(View view) {
-        if (view.getId() == R.id.bt_nova_mensagem) {
-            Intent intent = new Intent(getApplicationContext(), BuscarMensagemActivity.class);
-            startActivity(intent);
 
-            startActivity(intent);
-        }
-    }
 
     public void efetuarLogin(View view) {
         if (view.getId() == R.id.bt_entrar) {

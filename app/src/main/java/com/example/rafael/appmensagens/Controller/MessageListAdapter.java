@@ -87,10 +87,13 @@ public class MessageListAdapter extends RecyclerView.Adapter {
 
             messageText = (TextView) itemView.findViewById(R.id.text_message_body);
             timeText = (TextView) itemView.findViewById(R.id.text_message_time);
+
+
         }
 
         void bind(Mensagem message) {
             messageText.setText(message.getCorpo());
+            //timeText.setText(message.getAssunto());
 
             // Format the stored timestamp into a readable String using method.
             //timeText.setText(Utils.formatDateTime(message.getCreatedAt()));
@@ -112,10 +115,7 @@ public class MessageListAdapter extends RecyclerView.Adapter {
 
         void bind(Mensagem message) {
             messageText.setText(message.getCorpo());
-
-            // Format the stored timestamp into a readable String using method.
-            //timeText.setText(Utils.formatDateTime(message.getCreatedAt()));
-
+            //timeText.setText(message.getAssunto());
             nameText.setText(message.getOrigem().getApelido());
 
             // Insert the profile image from the URL into the ImageView.

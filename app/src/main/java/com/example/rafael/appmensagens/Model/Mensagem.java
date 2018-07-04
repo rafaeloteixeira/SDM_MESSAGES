@@ -1,14 +1,18 @@
 package com.example.rafael.appmensagens.Model;
 
+import android.support.annotation.NonNull;
+
 import com.google.gson.annotations.SerializedName;
+
+import java.util.Comparator;
 
 /**
  * Created by rafael on 02/07/2018.
  */
 
 
-public class Mensagem {
-    private String id;
+public class Mensagem implements Comparable
+{    private String id;
 
     @SerializedName("origem_id")
     private String origemId;
@@ -74,5 +78,16 @@ public class Mensagem {
 
     public void setDestino(Contato destino) {
         this.destino = destino;
+    }
+
+    @Override
+    public int compareTo(@NonNull Object o) {
+            if (Integer.parseInt(this.getId()) < Integer.parseInt(((Mensagem)o).getId())) {
+                return -1;
+            }
+            if (Integer.parseInt(this.getId()) > Integer.parseInt(((Mensagem)o).getId())) {
+                return 1;
+            }
+            return 0;
     }
 }
